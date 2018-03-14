@@ -1,0 +1,10 @@
+/* Navbar collapse implementation based on https://codepen.io/Dimmi/pen/dpEKpP
+*/
+
+#navbar-toggle {
+    display: none;
+}
+
+#navbar-toggle:checked ~ .collapse {
+    display: block;
+}

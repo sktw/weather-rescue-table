@@ -1,0 +1,181 @@
+.app {
+    margin: 0px 10px;
+}
+
+.wrapper {
+    display: table;
+}
+
+.subject-selector {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.subject-selector label {
+    margin-top: 0.5rem;
+}
+
+.buttons {
+    margin-bottom: 30px;
+}
+
+.row-header {
+    white-space: nowrap;
+}
+
+/* Have to set column-header values for IE11 */
+
+.column-header {
+    min-width: 10rem;
+    width: 10rem;
+}
+
+.column-pressure {
+    min-width: 6rem;
+    width: 6rem;
+}
+
+.column-temperature {
+    min-width: 6rem;
+    width: 6rem;
+}
+
+.column-rainfall {
+    min-width: 6rem;
+    width: 6rem;
+}
+
+.input-group.value-group > .input-group-prepend > .input-group-text,
+.input-group.value-group > .form-control.value-input {
+    padding: 0.1rem 0.25rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+}
+
+.input-group.value-group > .input-group-prepend > .input-group-text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+.input-group.value-group > .form-control.value-input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.input-group.result-group > .input-group-append > .btn,
+.input-group.result-group > .form-control.result-input {
+    padding: 0.1rem 0.25rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+}
+
+.input-group.result-group > .input-group-append > .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.input-group.result-group > .form-control.result-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.form-control.value-input {
+    text-align: right;
+    border-left: 0;
+}
+
+.valid-tooltip {
+    width: 100%;
+    left: 0px;
+}
+
+.invalid-tooltip {
+    width: 100%;
+    left: 0px;
+}
+
+.invalid-tooltip.value-tooltip {
+    width: 16rem;
+    max-width: 16rem;
+    left: 0px;
+}
+
+.input-group.value-group .value-tooltip {
+    display: none;
+}
+
+.input-group.value-group.is-invalid > .value-input:focus ~ .value-tooltip {
+    display: block;
+}
+
+.results-row td {
+    border-top: 2px solid #dee2e6;
+}
+
+.input-group-text.value-icon {
+    background-color: #fff;
+    border-right: 0;
+}
+
+.input-group.value-group .value-icon {
+    color: inherit;
+}
+
+.input-group.value-group .input-group-prepend {
+    border-color: inherit;
+    color: inherit;
+}
+
+.input-group.value-group .value-input {
+    border-color: inherit;
+}
+
+.input-group.value-group .value-icon {
+    border-color: inherit;
+    color: inherit;
+}
+
+.input-group.value-group {
+    color: #fff;
+    border-color: #ced4da;
+}
+
+.input-group.value-group.is-unclear {
+    color: #495057;
+}
+
+.input-group.value-group.is-invalid {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.input-group.value-group.is-valid {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.table.input-table {
+    width: auto;
+    table-layout: fixed;
+    margin-bottom: 50px;
+}
+
+.table.input-table th {
+    padding: 0.2rem 0.3rem;
+}
+
+.table.input-table td {
+    border-top: 0;
+    padding: 0.1rem 0.3rem;
+}
+
+.table.input-table tr.below-block-boundary td,
+.table.input-table tr.results-row td {
+    border-top: 2px solid #dee2e6;
+    padding-top: 0.2rem;
+}
+
+.table.input-table tr.above-block-boundary td {
+    padding-bottom: 0.2rem;
+}

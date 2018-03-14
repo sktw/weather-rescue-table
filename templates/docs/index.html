@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <% htmlWebpackPlugin.options.context.css.forEach(function(css) { %>
+            <%= css %>
+        <% }) %>
+        <style>
+            .valid {
+                color: #28a745;
+            }
+
+            .invalid {
+                color: #dc3545;
+            }
+            td > ul {
+                margin-bottom: 0;
+            }
+        </style>
+        <title>Weather Rescue Table</title>
+    </head>
+    <body>
+        <%= htmlWebpackPlugin.options.context.icons %>
+        <div class="navbar navbar-expand-sm navbar-light bg-light" role="navigation">
+            <a class="navbar-brand" href="/">Weather Rescue Table</a>
+            <input type="checkbox" id="navbar-toggle">
+            <label for="navbar-toggle" class="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </label>
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/table">Table</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/docs">Documentation <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container pt-3 pb-5">
+           <div class="row">
+                <div class="col-12">
+                    <h1>Documentation</h1>
+                    <hr />
+                    <h2 id="quick-start">Quick Start</h2>
+                    <ol>
+                        <li>
+                            <p>To begin, you'll need to open two browser windows, and arrange them side by side. Open the <a href="<%= htmlWebpackPlugin.options.context.links.weatherRescue %>/classify">Weather Rescue</a> classify page in one, and <a href="/table">WRT</a> in the other.</p>
+                            <p>More information: <a href="#arranging-windows">Arranging Windows</a></p>
+                        </li>
+                        <li>
+                            <p>On the WRT page, select the subject set using the dropdown menus.</p>
+                            <p>More information: <a href="#subject-sets">Subject Sets</a></p>
+                        </li>
+                        <li>
+                            <p>Start entering values by clicking in the top-left box of the table. Press <kbd>Enter</kbd> to move on to the next value.</p>
+                            <p>Once you have entered all the values in a column (without errors), the output for that column appears in the results row at the bottom of the table. You can either copy the results over to Weather Rescue immediately, or continue to fill-in the rest of the table.</p>
+                            <p>More information: <a href="#navigation">Navigation</a>, <a href="#keyboard-shortcuts">Keyboard Shortcuts</a>, <a href="#unclear">Unclear</a>, <a href="#validation">Validation</a></p>
+                        </li>
+                        <li>
+                            <p>To transfer the output from a column over to Weather Rescue, click the <strong>Copy</strong> <svg class="icon fa-copy"><use xlink:href="#fa-copy"></use></svg> button next to the box in the results row. The output is copied onto the clipboard. Paste it into the box on Weather Rescue using <strong>right-click</strong> → <strong>Paste</strong> or <strong>left-click</strong> → <kbd>Ctrl V</kbd>.</p>
+                            <p>More information: <a href="#copying-output">Copying Output</a></p>
+                        </li>
+                        <li>
+                            <p>Once you have copied the output from all columns over to Weather Rescue, click <strong>Done</strong> to reset the table and start the next observation.</p>
+                        </li>
+                    </ol>
+                    <hr />
+                    <h2 id="arranging-windows">Arranging Windows</h2>
+                    <p>To use WRT you'll need to open two browser windows, and place them side-by-side. Right-click the following <a href="<%= htmlWebpackPlugin.options.context.links.weatherRescue %>/classify">link</a>  and select 'Open Link in New Tab' to open the Weather Rescue classify page in a new tab. Right-click the following <a href="/table">link</a> and select 'Open Link in New Window' to open WRT in a new window.</p>
+
+                    <p>The method for placing the windows side-by-side depends on your operating system:</p>
+
+                    <ul>
+                        <li><strong>Windows/Linux</strong>: Click and drag the title bar of Weather Rescue window to the left past the edge of the screen. You should see the left-hand side of the screen highlighted. Release the window and it will fill the left-half of the screen. Click and drag the title bar of the WRT window to the right past the edge of the screen, and release it. It should fill the right-half of the screen.</li>
+                        <li><strong>Mac (OS X El Capitan or later)</strong>: Follow the instructions <a href="https://support.apple.com/en-gb/HT204948">here</a>.</li>
+                    </ul>
+
+                    <p>You should end up with something like the image below <a href="#arranging-windows-1">[1]</a>:</p>
+
+                    <img class="img-fluid mb-3" src="/docs/images/1907_wr-left.jpg" />
+
+                    <p>If you want to put the table closer to the image, you can overlap the windows. To do this, click on the left-hand edge of the WRT window, and drag it past the edge of the Weather Rescue window. You might need to open up a gap between the windows first by clicking on the title bar and dragging it to the right. Here's the result:</p>
+                    
+                    <img class="img-fluid mb-3" src="/docs/images/1907_wr-overlap.jpg" />
+
+                    <p>Make sure that the left-hand side of the input box on the Weather Rescue site is visible. This allows you to click in the box directly when you come to copy the output across.</p>
+
+                    <p>Another option is available if your screen is tall enough. By resizing the Weather Rescue window you can make the site stack the image and instructions vertically rather than horizontally. Click on the right-hand edge of the Weather Rescue window and drag it to the left. You should see the layout change. Finally, drag the left-hand edge of the WRT window to the left to fill the gap:</p>
+
+                    <img class="img-fluid mb-3" src="/docs/images/1907_wr-stacked.jpg" />
+
+                    <p>To make sure that the image and buttons are visible, you might need to scroll the screen down and/or zoom out; in the screenshots above, the zoom level in the Weather Rescue window has been set to 90%.</p>
+                    <ul class="list-unstyled">
+                        <li id="arranging-windows-1">[1] The actual result will depend on your operating system, browser and screen size.</li>
+                    </ul>
+
+                    <hr />
+                    <h2 id="subject-sets">Subject Sets</h2>
+                    <p>Select the subject set as follows:</p>
+                    <ol>
+                        <li>Select the year of the observations from the first dropdown menu.</li>
+                        <li>Select the locations; these are the first and last place names in the table. If the title includes a date range, check the date of the observation on Weather Rescue to see which one you need.</li>
+                        <li>Select the columns; these are the headings of each of the columns that need to be transcribed. Columns marked in Weather Rescue as '[ignore]' are <strong>not</strong> included.</li>
+                    </ol>
+
+                    <div class="alert alert-warning" role="alert">
+                        Once the table has been created, check that it matches the observation image on Weather Rescue.
+                    </div>
+                    <div class="alert alert-info" role="alert"> 
+                    If you can't find the right subject set, it may be that it hasn't yet been added to WRT. You can either reload the Weather Rescue site to get a different subject set, or transcribe the observations directly on Weather Rescue.
+                    </div>
+                    
+                    <hr />
+                    <h2 id="navigation">Navigation</h2>
+                    <p>You can move around between inputs using the mouse, or with the following key combinations:</p>
+                    <ul>
+                        <li><kbd>Enter</kbd>, <kbd>Tab</kbd> or <kbd>↓</kbd> moves to the next input.</li>
+                        <li><kbd>Shift Tab</kbd> or <kbd>↑</kbd> moves to the previous input.</li>
+                    </ul>
+                    
+                    <p>Values are visited first in column order, followed by the output <strong>Copy</strong> buttons, and finally the <strong>Done</strong> button.</p>
+
+                    <hr />
+                    <h2 id="unclear">Unclear</h2>
+                    <p>To mark a value as unclear, make sure that the cursor is inside the box and click the <strong>Unclear</strong> button. The unclear icon <svg class="icon wi-cloud"><use xlink:href="#wi-cloud"></use></svg> appears inside the box. Clicking <strong>Unclear</strong> again unmarks it. Although you won't see the unclear tags '[unclear][/unclear]', they will be added to the column output.</p>
+                    
+                   <div class="alert alert-warning" role="alert">
+                        Values marked as unclear are <strong>not</strong> validated - whatever you type will be accepted.
+                   </div> 
+
+                    <hr />
+                    <h2 id="keyboard-shortcuts">Keyboard Shortcuts</h2>
+                    <p>The following keyboard shortcuts are available:</p>
+                    <ul>
+                        <li><kbd>+</kbd> becomes '?'</li>
+                        <li><kbd>.</kbd> becomes '#' (only as a single character)</li>
+                        <li><kbd>/</kbd> marks/unmarks unclear</li>
+                        <li>For pressure and rainfall values, you don't need to type the decimal point as WRT will insert it automatically</li>
+                    </ul>
+
+                    <hr />
+                    <h2 id="validation">Validation</h2>
+                    <p>WRT checks that the values you enter have the correct type for that column. These types are summarized below.</p>
+
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Column</th>
+                                <th>Allowed Values</th>
+                                <th>Examples</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pressure</td>
+                                <td>
+                                    <ul class="list-unstyled">
+                                        <li>A decimal number starting with 27, 28, 29, 30, 31, with 2 digits after the decimal point</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    27.90, 31.25
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Temperature</td>
+                                <td>
+                                    <ul class="list-unstyled">
+                                        <li>A positive or negative whole number, or zero</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    -5, 0, 28
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Rainfall</td>
+                                <td>
+                                    <ul class="list-unstyled">
+                                        <li>A decimal number with 2 digits after the decimal point</li>
+                                        <li>A '-' or '0' to indicate zero rainfall</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    0, 0.04, -, 1.50
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>All</td>
+                                <td>
+                                    <ul class="list-unstyled">
+                                        <li>A '#' or '*' to indicate a missing value</li>
+                                        <li>A '?' before a value to indicate that it is uncertain</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    #, *, ?31.37, ?-45
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p>Each value box in WRT is in one of three states:</p>
+
+                    <ul>
+                        <li><strong>Unedited</strong>: Boxes that haven't been edited yet have no icon and a grey border.</li>
+                        <li><strong>Valid</strong>: Boxes that contain a valid value (according to the table above) contain a sun symbol <svg class="icon wi-day-sunny valid"><use xlink:href="#wi-day-sunny"></use></svg> (or an unclear symbol <svg class="icon wi-cloud valid"><use xlink:href="#wi-cloud"></use></svg>) and have a green border.</li>
+                        <li><strong>Invalid</strong>: Boxes that contain an invalid value contain a raincloud symbol <svg class="icon wi-rain invalid"><use xlink:href="#wi-rain"></use></svg> and have a red border.</li>
+                    </ul>
+
+                    <p>For each column of values, WRT will only generate output if all of the boxes in that column have valid values.</p>
+
+                    <div class="alert alert-info">
+                        To be valid, a box has to contain something. If the value should be blank, enter a '#' or a '*'.
+                    </div>
+                    <div class="alert alert-warning">
+                        WRT can't detect all mistyping errors - be sure to check your transcriptions before submitting them.
+                    </div>
+
+                    <hr />
+                    <h2 id="copying-output">Copying Output</h2>
+                    <p>Once you've completed transcribing the weather data, you need transfer it to the Weather Rescue site using copy and paste. There are two ways to copy the output onto the clipboard:</p>
+                    <ul>
+                        <li>Click the <strong>Copy</strong> <svg class="icon fa-copy"><use xlink:href="#fa-copy"></use></svg> button next to the box in the results row. The copy button may not work in some browsers. The message 'Copy error' may appear below the box if the copy operation fails <a href="#copying-output-1">[1]</a>.</li>
+                        <li>Alternatively, in the box containing the output, use <strong>right-click</strong> → <strong>Copy</strong> or <strong>left-click</strong> → <kbd>Ctrl C</kbd>. When you click in the box, WRT selects the output, so you don't need to select all.</li>
+                    </ul>
+
+                    <p>The message 'Copied' appears at the bottom of the column. Paste the output into the box on Weather Rescue using <strong>right-click</strong> → <strong>Paste</strong> or <strong>left-click</strong> → <kbd>Ctrl V</kbd>. Once all columns have been copied, the <strong>Done</strong> button is enabled. Click <strong>Done</strong> to reset the table ready for the next observation.</p>
+
+                    <ul class="list-unstyled">
+                        <li id="copying-output-1">[1] Internet Explorer will prompt you to allow WRT to access the clipboard. If you don't want to allow WRT to access the clipboard, you can instead copy the output using the second method described above. Note that if you choose not to allow access, the browser will block the copy operation, but do so <i>silently</i>. This means that you will still see the 'Copied' message below the box, even though nothing has been copied to the clipboard.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+            <link href="/css/icons.css" rel="stylesheet">
+        
+            <link href="/css/navbar.css" rel="stylesheet">
+        
+        <title>Weather Rescue Table</title>
+    </head>
+    <body>
+        <div class="navbar navbar-expand-sm navbar-light bg-light" role="navigation">
+            <a class="navbar-brand" href="/">Weather Rescue Table</a>
+            <input type="checkbox" id="navbar-toggle">
+            <label for="navbar-toggle" class="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </label>
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/table">Table</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/docs">Documentation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container pb-5">
+            <div id="jumbotron" class="jumbotron mt-3">
+                <h1>Weather Rescue Table</h1>
+                <p class="lead">An app to assist in transcribing observations for the <a href="https://www.zooniverse.org/projects/edh/weather-rescue">Weather Rescue</a> project.</p>
+                <a class="btn btn-primary" href="/table" target="_blank">Open table >></a>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2>About</h2>
+                    <p>Weather Rescue Table (WRT) provides a table into which you can transcribe the weather observations. After checking for possible errors, it creates output that you can paste into the boxes on the Weather Rescue site.</p>
+                    <hr />
+                    <h2>Features</h2>
+                    <ul>
+                        <li>Checks that the right number of values have been entered for a given column, and that the values have the correct type.</li>
+                        <li>Lets you see the whole transcription before submitting it. This reduces the chances of accidentally transcribing the same column twice.</li>
+                        <li>Provides keyboard shortcuts for uncertain, blank and unclear values, and automatically inserts decimal points.</li>
+                    </ul>
+                    <hr />
+                    <h2>Getting Started</h2>
+                    <p>Read the <a href="/docs/#quick-start">quick start guide</a>.</p>
+                    <hr />
+                    <h2>Information</h2>
+                    <p>WRT is not an official part of the Weather Rescue project. Code is available on <a href="https://github.com/sktw/weather-rescue-table">GitHub</a>. <a href="https://github.com/sktw/weather-rescue-table/blob/master/LICENSE">MIT license.</a></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
