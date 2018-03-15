@@ -33,8 +33,8 @@ var links = {
     weatherRescue: "https://www.zooniverse.org/projects/edh/weather-rescue",
     github: "https://github.com/sktw/weather-rescue-table",
     home: url(''),
-    table: url('table'),
-    docs: url('docs')
+    table: url('table/'),
+    docs: url('docs/')
 }
 
 module.exports = merge(common, {
