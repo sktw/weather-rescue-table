@@ -83,7 +83,7 @@ module.exports = merge(common, {
                         src: 'https://unpkg.com/react-dom@16.2.0/umd/react-dom.production.min.js', 
                         integrity: 'sha384-P4XM5fEtXj1kXZzsm1EOHZ7HmQIuzyRjjvX4na21R4eRLjmm+oUZua5ALb2PIojw'
                     }),
-                    script({src: 'https://sktw.github.io/weather-rescue-subjects/manifests.js'})
+                    script({src: 'https://sktw.github.io/weather-rescue-manifests/manifests.js'})
                 ],
                 css: [].concat(common_css, [
                     link({href: url('table/css/styles.css'), rel: 'stylesheet'})

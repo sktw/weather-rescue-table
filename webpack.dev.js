@@ -55,7 +55,7 @@ module.exports = merge(common, {
             template: 'templates/table/index.html',
             filename: 'table/index.html',
             context: {
-                js: [script({src: 'https://sktw.github.io/weather-rescue-subjects/manifests.js'})],
+                js: [script({src: 'https://sktw.github.io/weather-rescue-manifests/manifests.js'})],
                 css: [].concat(common_css, [
                     link({href: url('table/css/styles.css'), rel: 'stylesheet'})
                 ]),
